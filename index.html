@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Guzman - Data Visualization Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#1f2937',
+                        'dark-card': '#374151'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-800 text-gray-200 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Gabriel Guzman</h1>
+            <div class="space-x-4">
+                <a href="#projects" class="hover:text-gray-400">Projects</a>
+                <a href="#skills" class="hover:text-gray-400">Skills</a>
+                <a href="mailto:gabe.r.guzman@gmail.com" class="hover:text-gray-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gray-700 py-16 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4">Application Developer & Data Visualizer</h2>
+            <p class="text-xl mb-8">Crafting interactive data experiences that tell compelling stories</p>
+            <a href="https://github.com/yourusername" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full">View GitHub</a>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- NBA ShotCharts -->
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">NBA ShotCharts</h3>
+                        <p class="mb-4">Interactive web application providing tailored shot charts for NBA teams and players since 1997.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Demo</a>
+                            <a href="#" class="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basketbot -->
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">Basketbot</h3>
+                        <p class="mb-4">Discord bot producing personalized visualizations, serving over 30,000 unique graphics and video clips.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Showcase</a>
+                            <a href="#" class="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CourtSketch -->
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-4">CourtSketch</h3>
+                        <p class="mb-4">Advanced web application offering over 40 graph options for dynamic NBA data visualization and analysis.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Live App</a>
+                            <a href="#" class="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Languages</h3>
+                    <p>Python, JavaScript, HTML, Java, SQL</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Frameworks</h3>
+                    <p>Django, React, Dash, Plotly</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Cloud & DevOps</h3>
+                    <p>Docker, Kubernetes, OpenShift, AWS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Let's Connect</h2>
+            <p class="mb-8">Interested in collaboration or have a project in mind?</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:gabe.r.guzman@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full">Email Me</a>
+                <a href="https://twitter.com/GabeLeftBrain" target="_blank" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-3 rounded-full">Follow on Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center">
+        <p>&copy; 2024 Gabriel Guzman. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
