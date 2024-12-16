@@ -1,235 +1,156 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Guzman - Data Visualization Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar and slide transition */
+        .slide-container {
+            scroll-snap-type: x mandatory;
+            overflow-x: scroll;
+            display: flex;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            scroll-snap-align: center;
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+        /* Hide scrollbar but keep functionality */
+        .slide-container::-webkit-scrollbar {
+            display: none;
+        }
+        .slide-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <header class="hero">
-            <div class="hero-content">
-                <h1>Gabriel Guzman</h1>
-                <p class="subtitle">Application Developer | Data Visualization Specialist</p>
-                <div class="contact-links">
-                    <a href="mailto:gabe.r.guzman@gmail.com"><i class="ri-mail-line"></i></a>
-                    <a href="https://github.com/yourusername"><i class="ri-github-fill"></i></a>
-                    <a href="https://linkedin.com/in/yourusername"><i class="ri-linkedin-fill"></i></a>
-                </div>
+<body class="bg-gray-900 text-gray-200 font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4">Gabriel Guzman</h1>
+            <p class="text-xl text-gray-400">Application Developer | Data Visualization Specialist</p>
+            <div class="mt-4 space-x-4">
+                <a href="mailto:gabe.r.guzman@gmail.com" class="text-blue-400 hover:text-blue-300">gabe.r.guzman@gmail.com</a>
+                <a href="https://github.com/gabriel1200/" class="text-blue-400 hover:text-blue-300">GitHub</a>
+                <a href="https://www.linkedin.com/in/gabrielrguzman/" class="text-blue-400 hover:text-blue-300">LinkedIn</a>
             </div>
         </header>
-        <section class="projects-section">
-            <h2>Key Projects</h2>
-            <div class="projects-list">
-                <div class="project-item">
-                    <div class="project-info">
-                        <h3>NBA Visuals</h3>
-                        <p>Comprehensive web application for NBA data visualization with 40+ graphing tools.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>React</span>
-                            <span>Data Visualization</span>
+
+        <!-- Project Slider -->
+        <section class="relative">
+            <div class="slide-container flex overflow-hidden" id="projectSlider">
+                <!-- NBA Visuals Project -->
+                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mr-8">
+                        <img src="/api/placeholder/500/300" alt="NBA Visuals Dashboard" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">NBA Visuals</h2>
+                        <p class="mb-4">A comprehensive web application for NBA data visualization featuring 40+ graphing tools. Developed as a full-stack project to provide engaging and insightful basketball analytics.</p>
+                        <div class="space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Live Demo</a>
+                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-primary">Live Demo</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
+                        <div class="mt-4">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">React</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Data Visualization</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-item">
-                    <div class="project-info">
-                        <h3>Basketbot</h3>
-                        <p>Discord bot generating personalized basketball visualizations for 30,000+ users.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Discord API</span>
-                            <span>Data Visualization</span>
+                <!-- Discord Bot Project -->
+                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mr-8">
+                        <img src="/api/placeholder/500/300" alt="Basketbot Discord Interface" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">Basketbot</h2>
+                        <p class="mb-4">A Discord bot that generates personalized basketball visualizations. Serving a community of over 30,000 users with more than 30,000 unique graphics and video clips.</p>
+                        <div class="space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Bot Invite</a>
+                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-primary">Bot Invite</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
+                        <div class="mt-4">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Discord API</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Data Visualization</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-item">
-                    <div class="project-info">
-                        <h3>CopyGPT</h3>
-                        <p>AI-powered copywriting Slackbot increasing content productivity by 50%.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>AI/ML</span>
-                            <span>Slack API</span>
+                <!-- CopyGPT Project -->
+                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mr-8">
+                        <img src="/api/placeholder/500/300" alt="CopyGPT Slackbot" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">CopyGPT</h2>
+                        <p class="mb-4">A GPT-based copywriting and Slackbot tool that increased content productivity by 50%, generating over 300 copyrights with intelligent text generation.</p>
+                        <div class="space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">View Project</a>
+                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-primary">View Project</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
+                        <div class="mt-4">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">AI/ML</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Slack API</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Slider Navigation -->
+            <div class="flex justify-center mt-6">
+                <button onclick="scrollSlider(-1)" class="mx-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full">&larr;</button>
+                <button onclick="scrollSlider(1)" class="mx-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full">&rarr;</button>
+            </div>
         </section>
 
-        <section class="visualizations-showcase">
-            <h2>Visual Showcase</h2>
-            <div class="showcase-slider" id="visualizationSlider">
-                <div class="showcase-container">
-                    <div class="showcase-item">
-                        <div class="showcase-image">
-                            <img src="/api/placeholder/600/400" alt="Visualization Example 1">
-                        </div>
-                        <div class="showcase-description">
-                            <h3>Shot Distribution Analysis</h3>
-                            <p>Detailed breakdown of player shooting patterns across different court zones.</p>
-                        </div>
-                    </div>
-
-                    <div class="showcase-item">
-                        <div class="showcase-image">
-                            <img src="/api/placeholder/600/400" alt="Visualization Example 2">
-                        </div>
-                        <div class="showcase-description">
-                            <h3>Team Performance Metrics</h3>
-                            <p>Comparative analysis of team performance across multiple seasons.</p>
-                        </div>
-                    </div>
-
-                    <div class="showcase-item">
-                        <div class="showcase-image">
-                            <img src="/api/placeholder/600/400" alt="Visualization Example 3">
-                        </div>
-                        <div class="showcase-description">
-                            <h3>Player Progression Tracker</h3>
-                            <p>Visualization of player skill development over multiple seasons.</p>
-                        </div>
-                    </div>
+        <!-- Skills Section -->
+        <section class="mt-16 bg-gray-800 p-8 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-8">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-gray-700 p-4 rounded text-center">
+                    <h3 class="font-semibold">Languages</h3>
+                    <p class="text-gray-400">Python, JavaScript, HTML, Java, SQL</p>
                 </div>
-
-                <div class="slider-controls">
-                    <button id="prevVisualization" class="slider-btn"><i class="ri-arrow-left-line"></i></button>
-                    <button id="nextVisualization" class="slider-btn"><i class="ri-arrow-right-line"></i></button>
+                <div class="bg-gray-700 p-4 rounded text-center">
+                    <h3 class="font-semibold">Frameworks</h3>
+                    <p class="text-gray-400">Django, React, Dash</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded text-center">
+                    <h3 class="font-semibold">Cloud & DevOps</h3>
+                    <p class="text-gray-400">Docker, Kubernetes, OpenShift</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded text-center">
+                    <h3 class="font-semibold">Data Tools</h3>
+                    <p class="text-gray-400">Pandas, NumPy, Plotly</p>
                 </div>
             </div>
         </section>
 
-        <section class="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <p>Python, JavaScript, HTML, Java, SQL</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks</h3>
-                    <p>Django, React, Dash</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <p>Docker, Kubernetes, OpenShift</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Tools</h3>
-                    <p>Pandas, NumPy, Plotly</p>
-                </div>
-            </div>
-        </section>
+        
     </div>
 
-        <section class="project-slider" id="projectSlider">
-            <div class="projects-container">
-                <div class="project">
-                    <div class="project-image">
-                        <img src="/api/placeholder/500/300" alt="NBA Visuals Dashboard">
-                    </div>
-                    <div class="project-details">
-                        <h2>NBA Visuals</h2>
-                        <p>Comprehensive web application for NBA data visualization with 40+ graphing tools.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>React</span>
-                            <span>Data Visualization</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#" class="btn btn-primary">Live Demo</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+    <script>
+        // Simple slider navigation without external libraries
+        let currentSlide = 0;
+        const slider = document.getElementById('projectSlider');
+        const slides = slider.children.length;
 
-                <div class="project">
-                    <div class="project-image">
-                        <img src="/api/placeholder/500/300" alt="Basketbot Dashboard">
-                    </div>
-                    <div class="project-details">
-                        <h2>Basketbot</h2>
-                        <p>Discord bot generating personalized basketball visualizations for 30,000+ users.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Discord API</span>
-                            <span>Data Visualization</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#" class="btn btn-primary">Bot Invite</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-image">
-                        <img src="/api/placeholder/500/300" alt="CopyGPT Interface">
-                    </div>
-                    <div class="project-details">
-                        <h2>CopyGPT</h2>
-                        <p>AI-powered copywriting Slackbot increasing content productivity by 50%.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>AI/ML</span>
-                            <span>Slack API</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#" class="btn btn-primary">View Project</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-controls">
-                <button id="prevProject" class="slider-btn"><i class="ri-arrow-left-line"></i></button>
-                <button id="nextProject" class="slider-btn"><i class="ri-arrow-right-line"></i></button>
-            </div>
-        </section>
-
-        <section class="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <p>Python, JavaScript, HTML, Java, SQL</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks</h3>
-                    <p>Django, React, Dash</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <p>Docker, Kubernetes, OpenShift</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Tools</h3>
-                    <p>Pandas, NumPy, Plotly</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="index.js"></script>
+        function scrollSlider(direction) {
+            currentSlide = (currentSlide + direction + slides) % slides;
+            slider.scrollTo({
+                left: currentSlide * slider.offsetWidth,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
