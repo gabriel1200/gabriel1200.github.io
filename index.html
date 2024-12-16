@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Guzman - Data Visualization Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src ="style.css"></script>
     <style>
         /* Custom scrollbar and slide transition */
         .slide-container {
@@ -17,6 +18,9 @@
             scroll-snap-align: center;
             flex: 0 0 100%;
             min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         /* Hide scrollbar but keep functionality */
         .slide-container::-webkit-scrollbar {
@@ -25,6 +29,11 @@
         .slide-container {
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
+        }
+        .image-slide img {
+            max-width: 90%;
+            max-height: 50vh;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -41,116 +50,157 @@
             </div>
         </header>
 
-        <!-- Project Slider -->
-        <section class="relative">
-            <div class="slide-container flex overflow-hidden" id="projectSlider">
-                <!-- NBA Visuals Project -->
-                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-6 md:mr-8">
-                        <img src="/api/placeholder/500/300" alt="NBA Visuals Dashboard" class="rounded-lg shadow-lg">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h2 class="text-3xl font-bold mb-4">NBA Visuals</h2>
-                        <p class="mb-4">A comprehensive web application for NBA data visualization featuring 40+ graphing tools. Developed as a full-stack project to provide engaging and insightful basketball analytics.</p>
-                        <div class="space-x-4">
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Live Demo</a>
-                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
-                        </div>
-                        <div class="mt-4">
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">React</span>
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Data Visualization</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Discord Bot Project -->
-                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-6 md:mr-8">
-                        <img src="/api/placeholder/500/300" alt="Basketbot Discord Interface" class="rounded-lg shadow-lg">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h2 class="text-3xl font-bold mb-4">Basketbot</h2>
-                        <p class="mb-4">A Discord bot that generates personalized basketball visualizations. Serving a community of over 30,000 users with more than 30,000 unique graphics and video clips.</p>
-                        <div class="space-x-4">
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Bot Invite</a>
-                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
-                        </div>
-                        <div class="mt-4">
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Discord API</span>
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Data Visualization</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CopyGPT Project -->
-                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-6 md:mr-8">
-                        <img src="/api/placeholder/500/300" alt="CopyGPT Slackbot" class="rounded-lg shadow-lg">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h2 class="text-3xl font-bold mb-4">CopyGPT</h2>
-                        <p class="mb-4">A GPT-based copywriting and Slackbot tool that increased content productivity by 50%, generating over 300 copyrights with intelligent text generation.</p>
-                        <div class="space-x-4">
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">View Project</a>
-                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
-                        </div>
-                        <div class="mt-4">
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">AI/ML</span>
-                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Slack API</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Projects Section -->
+   <!-- Projects Section -->
+<section class="mt-12">
+    <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
+    <div class="grid grid-cols-3 gap-4">
+        <!-- NBA Visuals Project -->
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2">NBA Visuals</h3>
+            <p class="text-sm mb-2">A comprehensive web application for NBA data visualization featuring 40+ graphing tools.</p>
+            <div class="space-x-2 mb-2">
+                <a href="https://nbavisuals.com/" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs">Link</a>
             </div>
-
-            <!-- Slider Navigation -->
-            <div class="flex justify-center mt-6">
-                <button onclick="scrollSlider(-1)" class="mx-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full">&larr;</button>
-                <button onclick="scrollSlider(1)" class="mx-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full">&rarr;</button>
+            <div>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Python</span>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">React</span>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Data Visualization</span>
             </div>
-        </section>
+        </div>
+
+        <!-- Basketbot Project -->
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2">Basketbot</h3>
+            <p class="text-sm mb-2">A Discord bot generating personalized basketball visualizations for over 30,000 users.</p>
+            <div class="space-x-2 mb-2">
+                <a href="https://github.com/gabriel1200/Bot_Guide/blob/main/bot_README.md" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs">Bot Guide </a>
+            </div>
+            <div>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Python</span>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Discord API</span>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Data Visualization</span>
+            </div>
+        </div>
+
+        <!-- CopyGPT Project -->
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2">NBA Shotcharts</h3>
+            <p class="text-sm mb-2">Shiny application utilizing shot location & bball index classification data to serve customized grantland style shotmaps for players, teams and combinations therein for the past 20 years.</p>
+            <div class="space-x-2 mb-2">
+                <a href="https://bball-index.shinyapps.io/shotchart/" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs">View Project</a>
+            </div>
+            <div>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Python</span>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Shiny</span>
+                <span class="bg-gray-700 text-gray-300 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Data Visualization</span>
+
+              
+            </div>
+        </div>
+    </div>
+</section>
+
 
         <!-- Skills Section -->
-        <section class="mt-16 bg-gray-800 p-8 rounded-lg">
-            <h2 class="text-3xl font-bold text-center mb-8">Technical Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-gray-700 p-4 rounded text-center">
-                    <h3 class="font-semibold">Languages</h3>
-                    <p class="text-gray-400">Python, JavaScript, HTML, Java, SQL</p>
+        <section class="mt-12 bg-gray-800 p-6 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-6">Technical Skills</h2>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-gray-700 p-3 rounded text-center">
+                    <h3 class="font-semibold text-sm">Languages</h3>
+                    <p class="text-gray-400 text-xs">Python, JavaScript, HTML, Java, SQL</p>
                 </div>
-                <div class="bg-gray-700 p-4 rounded text-center">
-                    <h3 class="font-semibold">Frameworks</h3>
-                    <p class="text-gray-400">Django, React, Dash</p>
+                <div class="bg-gray-700 p-3 rounded text-center">
+                    <h3 class="font-semibold text-sm">Frameworks</h3>
+                    <p class="text-gray-400 text-xs">Django, React, Dash, Shiny</p>
                 </div>
-                <div class="bg-gray-700 p-4 rounded text-center">
-                    <h3 class="font-semibold">Cloud & DevOps</h3>
-                    <p class="text-gray-400">Docker, Kubernetes, OpenShift</p>
+                <div class="bg-gray-700 p-3 rounded text-center">
+                    <h3 class="font-semibold text-sm">Cloud & DevOps</h3>
+                    <p class="text-gray-400 text-xs">Docker, Kubernetes, OpenShift</p>
                 </div>
-                <div class="bg-gray-700 p-4 rounded text-center">
-                    <h3 class="font-semibold">Data Tools</h3>
-                    <p class="text-gray-400">Pandas, NumPy, Plotly</p>
+                <div class="bg-gray-700 p-3 rounded text-center">
+                    <h3 class="font-semibold text-sm">Data Tools</h3>
+                    <p class="text-gray-400 text-xs">Pandas, NumPy, Plotly</p>
                 </div>
             </div>
         </section>
 
-        
-    </div>
+        <!-- Image Gallery Slider -->
+        <section class="mt-12">
+            <h2 class="text-3xl font-bold text-center mb-6">Data Visualization Portfolio</h2>
+            <div class="relative">
+                <div class="slide-container flex overflow-hidden" id="imageSlider">
+                    <!-- Images will be dynamically inserted here -->
+                </div>
 
+                <!-- Slider Navigation -->
+                <div class="flex justify-center mt-4">
+                    <button onclick="scrollSlider(-1)" class="mx-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full text-sm">&larr;</button>
+                    <button onclick="scrollSlider(1)" class="mx-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full text-sm">&rarr;</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
     <script>
-        // Simple slider navigation without external libraries
+        // Image list (replace with your actual image paths)
+        const images = [
+        "gamereport.jpeg", "picks.jpeg", "salarycomp.jpg", "teambrond.jpg",
+        "ballhog.jpg", "goalcont.jpg", "scoring.jpg", "teamleader.jpg",
+        "scoring_team.jpg", "teamleaderd.jpg",
+        "books.png", "howmuch.jpeg", "playchange.jpg", "season.jpg", "teamplay.jpg",
+        "careerbron.jpg", "howmuch.jpg", "player_card.jpg", "series.jpg", "teamplayd.jpg",
+        "contracts.jpg", "hustle.jpg", "player_series.jpeg", "series_scoring.png", "teamseason.jpg",
+        "contracts.png", "jumpshot.jpg", "playershift.jpeg", "shotchange1.jpg", "teamshotd.jpg",
+        "dlebron.jpg", "jumpshot.png", "playleader.jpg", "shotchange12.jpg", "teamshots.jpg",
+        "dlebron.png", "lineup_breakdown.jpeg", "playmake.jpg", "shotchange2.jpg", "teamthrees.jpg",
+        "dplayspread.jpg", "lineups.jpg", "playspread1.jpg", "shotchange22.jpg", "threepoint.jpg",
+        "dplayspread.png", "matchups.jpg", "playspread2.jpg", "shotdefenseoff.jpg", "threespread.jpg",
+        "dplayspread2.jpg", "matchups.png", "playspreadv2.jpg", "shotdefenseon.jpg", "tracking.jpg",
+        "dplayspread2.png", "olebron.jpg", "playstyle.jpg", "shotmap.jpg", "trending.jpg",
+        "dplayspreadv2.jpg", "olebron.png", "playtype.jpg", "shotzone.jpg", "w_shotmap.jpg",
+        "dplayspreadv2.png", "oppthrees.jpg", "price.jpg", "spread.jpg", "wowy.jpg",
+        "drapm.jpg", "orapm.jpg", "rim.jpg", "spread2.jpg", 
+        "drapm.png", "pairings.jpg", "rotation.jpg", "stats.jpg",
+        "dribbleshot.jpg", "passnetwork.jpeg", "rotations.jpg", "team_card.jpg",
+        "dribbleshot.png", "payspread1.jpg", "salary.jpg", "teambron.jpg",
+        "flow.jpg", "payspread2.jpg"
+        ];
+
+        // Slider functionality
         let currentSlide = 0;
-        const slider = document.getElementById('projectSlider');
-        const slides = slider.children.length;
+        const slider = document.getElementById('imageSlider');
+
+        // Populate slider with images
+        function populateSlider() {
+            images.forEach((imageName, index) => {
+                const slide = document.createElement('div');
+                slide.classList.add('slide', 'image-slide', 'p-4', 'bg-gray-800', 'rounded-lg');
+                
+                const img = document.createElement('img');
+                // Adjust the path to match your image directory
+                img.src = `images/${imageName}`;
+                img.alt = `Visualization ${index + 1}`;
+                img.classList.add('rounded-lg', 'shadow-lg');
+                
+                slide.appendChild(img);
+                slider.appendChild(slide);
+            });
+        }
 
         function scrollSlider(direction) {
+            const slides = slider.children.length;
             currentSlide = (currentSlide + direction + slides) % slides;
             slider.scrollTo({
                 left: currentSlide * slider.offsetWidth,
                 behavior: 'smooth'
             });
         }
+
+        // Initialize slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            populateSlider();
+        });
     </script>
 </body>
 </html>
