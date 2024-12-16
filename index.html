@@ -5,122 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Guzman - Data Visualization Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar and slide transition */
+        .slide-container {
+            scroll-snap-type: x mandatory;
+            overflow-x: scroll;
+            display: flex;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            scroll-snap-align: center;
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+        /* Hide scrollbar but keep functionality */
+        .slide-container::-webkit-scrollbar {
+            display: none;
+        }
+        .slide-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4">Gabriel Guzman</h1>
+            <p class="text-xl text-gray-400">Application Developer | Data Visualization Specialist</p>
+            <div class="mt-4 space-x-4">
+                <a href="mailto:gabe.r.guzman@gmail.com" class="text-blue-400 hover:text-blue-300">gabe.r.guzman@gmail.com</a>
+                <a href="https://github.com/yourgithub" class="text-blue-400 hover:text-blue-300">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" class="text-blue-400 hover:text-blue-300">LinkedIn</a>
+            </div>
+        </header>
+
+        <!-- Project Slider -->
+        <section class="relative">
+            <div class="slide-container flex overflow-hidden" id="projectSlider">
+                <!-- NBA Visuals Project -->
+                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mr-8">
+                        <img src="/api/placeholder/500/300" alt="NBA Visuals Dashboard" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">NBA Visuals</h2>
+                        <p class="mb-4">A comprehensive web application for NBA data visualization featuring 40+ graphing tools. Developed as a full-stack project to provide engaging and insightful basketball analytics.</p>
+                        <div class="space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Live Demo</a>
+                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
+                        </div>
+                        <div class="mt-4">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">React</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discord Bot Project -->
+                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mr-8">
+                        <img src="/api/placeholder/500/300" alt="Basketbot Discord Interface" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">Basketbot</h2>
+                        <p class="mb-4">A Discord bot that generates personalized basketball visualizations. Serving a community of over 30,000 users with more than 30,000 unique graphics and video clips.</p>
+                        <div class="space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Bot Invite</a>
+                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
+                        </div>
+                        <div class="mt-4">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Discord API</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CopyGPT Project -->
+                <div class="slide p-6 bg-gray-800 rounded-lg flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mr-8">
+                        <img src="/api/placeholder/500/300" alt="CopyGPT Slackbot" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">CopyGPT</h2>
+                        <p class="mb-4">A GPT-based copywriting and Slackbot tool that increased content productivity by 50%, generating over 300 copyrights with intelligent text generation.</p>
+                        <div class="space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">View Project</a>
+                            <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded">GitHub</a>
+                        </div>
+                        <div class="mt-4">
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Python</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">AI/ML</span>
+                            <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded mr-2 mb-2 inline-block">Slack API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation -->
+            <div class="flex justify-center mt-6">
+                <button onclick="scrollSlider(-1)" class="mx-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full">&larr;</button>
+                <button onclick="scrollSlider(1)" class="mx-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full">&rarr;</button>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mt-16 bg-gray-800 p-8 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-8">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-gray-700 p-4 rounded text-center">
+                    <h3 class="font-semibold">Languages</h3>
+                    <p class="text-gray-400">Python, JavaScript, HTML, Java, SQL</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded text-center">
+                    <h3 class="font-semibold">Frameworks</h3>
+                    <p class="text-gray-400">Django, React, Dash</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded text-center">
+                    <h3 class="font-semibold">Cloud & DevOps</h3>
+                    <p class="text-gray-400">Docker, Kubernetes, OpenShift</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded text-center">
+                    <h3 class="font-semibold">Data Tools</h3>
+                    <p class="text-gray-400">Pandas, NumPy, Plotly</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'dark-bg': '#1f2937',
-                        'dark-card': '#374151'
-                    }
-                }
-            }
+        // Simple slider navigation without external libraries
+        let currentSlide = 0;
+        const slider = document.getElementById('projectSlider');
+        const slides = slider.children.length;
+
+        function scrollSlider(direction) {
+            currentSlide = (currentSlide + direction + slides) % slides;
+            slider.scrollTo({
+                left: currentSlide * slider.offsetWidth,
+                behavior: 'smooth'
+            });
         }
     </script>
-</head>
-<body class="bg-gray-800 text-gray-200 font-sans">
-    <!-- Navigation -->
-    <nav class="bg-gray-900 py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Gabriel Guzman</h1>
-            <div class="space-x-4">
-                <a href="#projects" class="hover:text-gray-400">Projects</a>
-                <a href="#skills" class="hover:text-gray-400">Skills</a>
-                <a href="mailto:gabe.r.guzman@gmail.com" class="hover:text-gray-400">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="bg-gray-700 py-16 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-4">Application Developer & Data Visualizer</h2>
-            <p class="text-xl mb-8">Crafting interactive data experiences that tell compelling stories</p>
-            <a href="https://github.com/yourusername" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full">View GitHub</a>
-        </div>
-    </header>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- NBA ShotCharts -->
-                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-4">NBA ShotCharts</h3>
-                        <p class="mb-4">Interactive web application providing tailored shot charts for NBA teams and players since 1997.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Demo</a>
-                            <a href="#" class="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Basketbot -->
-                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-4">Basketbot</h3>
-                        <p class="mb-4">Discord bot producing personalized visualizations, serving over 30,000 unique graphics and video clips.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Showcase</a>
-                            <a href="#" class="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CourtSketch -->
-                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-4">CourtSketch</h3>
-                        <p class="mb-4">Advanced web application offering over 40 graph options for dynamic NBA data visualization and analysis.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Live App</a>
-                            <a href="#" class="bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gray-700">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Languages</h3>
-                    <p>Python, JavaScript, HTML, Java, SQL</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Frameworks</h3>
-                    <p>Django, React, Dash, Plotly</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Cloud & DevOps</h3>
-                    <p>Docker, Kubernetes, OpenShift, AWS</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-16 bg-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">Let's Connect</h2>
-            <p class="mb-8">Interested in collaboration or have a project in mind?</p>
-            <div class="flex justify-center space-x-6">
-                <a href="mailto:gabe.r.guzman@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full">Email Me</a>
-                <a href="https://twitter.com/GabeLeftBrain" target="_blank" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-3 rounded-full">Follow on Twitter</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center">
-        <p>&copy; 2024 Gabriel Guzman. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
