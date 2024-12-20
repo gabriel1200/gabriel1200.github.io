@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Guzman - Data Visualization Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="style.css"></script>
     <style>
-        /* Custom scrollbar and slide transition */
         .slide-container {
             scroll-snap-type: x mandatory;
             overflow-x: scroll;
@@ -22,87 +20,86 @@
             justify-content: center;
             align-items: center;
         }
-        /* Hide scrollbar but keep functionality */
         .slide-container::-webkit-scrollbar {
             display: none;
         }
         .slide-container {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
         .image-slide img {
-            max-width: 90%;
-            max-height: 50vh;
+            max-width: 100%;
+            max-height: 60vh;
             object-fit: contain;
         }
     </style>
 </head>
 <body class="bg-stone-50 text-slate-800 font-sans">
- <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto px-4 py-6 md:py-8">
         <!-- Header -->
-        <header class="text-center mb-12">
-            <h1 class="text-5xl font-bold mb-4 text-slate-900">Gabriel Guzman</h1>
-            <p class="text-xl text-slate-700">Application Developer | Data Visualization Specialist</p>
-            <div class="mt-4 space-x-4">
-                <a href="mailto:gabe.r.guzman@gmail.com" class="text-blue-600 hover:text-blue-700 transition-colors">gabe.r.guzman@gmail.com</a>
-                <a href="https://github.com/gabriel1200/" class="text-blue-600 hover:text-blue-700 transition-colors">GitHub</a>
-                <a href="https://www.linkedin.com/in/gabrielrguzman/" class="text-blue-600 hover:text-blue-700 transition-colors">LinkedIn</a>
-                <a href="work-history.html" class="text-blue-600 hover:text-blue-700 transition-colors">Work History</a>
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-3 md:mb-4 text-slate-900">Gabriel Guzman</h1>
+            <p class="text-lg md:text-xl text-slate-700">Application Developer | Data Visualization Specialist</p>
+            <div class="mt-4 flex flex-wrap justify-center gap-3 md:gap-4">
+                <a href="mailto:gabe.r.guzman@gmail.com" class="text-blue-600 hover:text-blue-700 transition-colors text-sm md:text-base">gabe.r.guzman@gmail.com</a>
+                <a href="https://github.com/gabriel1200/" class="text-blue-600 hover:text-blue-700 transition-colors text-sm md:text-base">GitHub</a>
+                <a href="https://www.linkedin.com/in/gabrielrguzman/" class="text-blue-600 hover:text-blue-700 transition-colors text-sm md:text-base">LinkedIn</a>
+                <a href="work-history.html" class="text-blue-600 hover:text-blue-700 transition-colors text-sm md:text-base">Work History</a>
             </div>
         </header>
 
         <!-- Projects Section -->
-        <section class="mt-12">
-            <h2 class="text-3xl font-bold text-center mb-6 text-slate-900">Projects</h2>
-            <div class="grid grid-cols-3 gap-4">
+        <section class="mt-8 md:mt-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-slate-900">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- NBA Visuals Project -->
                 <div class="bg-white border border-gray-200 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <h3 class="text-2xl font-bold mb-2 text-slate-900">NBA Visuals</h3>
+                    <h3 class="text-xl md:text-2xl font-bold mb-2 text-slate-900">NBA Visuals</h3>
                     <p class="text-sm mb-2 text-slate-700">A comprehensive web application for NBA data visualization featuring 40+ graphing tools.</p>
                     <div class="space-x-2 mb-2">
                         <a href="https://nbavisuals.com/" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs transition-colors">Link</a>
                     </div>
-                    <div>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Python</span>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">React</span>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Data Visualization</span>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">Python</span>
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">React</span>
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">Data Visualization</span>
                     </div>
                 </div>
 
                 <!-- Basketbot Project -->
                 <div class="bg-white border border-gray-200 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <h3 class="text-2xl font-bold mb-2 text-slate-900">Basketbot</h3>
+                    <h3 class="text-xl md:text-2xl font-bold mb-2 text-slate-900">Basketbot</h3>
                     <p class="text-sm mb-2 text-slate-700">A Discord bot generating personalized basketball visualizations for over 30,000 users.</p>
                     <div class="space-x-2 mb-2">
                         <a href="https://github.com/gabriel1200/Bot_Guide/blob/main/bot_README.md" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs transition-colors">Bot Guide</a>
                     </div>
-                    <div>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Python</span>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Discord API</span>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Data Visualization</span>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">Python</span>
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">Discord API</span>
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">Data Visualization</span>
                     </div>
                 </div>
 
                 <!-- NBA Shotcharts Project -->
                 <div class="bg-white border border-gray-200 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <h3 class="text-2xl font-bold mb-2 text-slate-900">NBA Shotcharts</h3>
-                    <p class="text-sm mb-2 text-slate-700">Shiny application utilizing shot location & bball index classification data to serve customized grantland style shotmaps for players, teams and combinations therein for the past 20 years.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-2 text-slate-900">NBA Shotcharts</h3>
+                    <p class="text-sm mb-2 text-slate-700">Shiny application utilizing shot location & bball index classification data to serve customized grantland style shotmaps.</p>
                     <div class="space-x-2 mb-2">
                         <a href="https://bball-index.shinyapps.io/shotchart/" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs transition-colors">View Project</a>
                     </div>
-                    <div>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Python</span>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Shiny</span>
-                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded mr-1 mb-1 inline-block text-xs">Data Visualization</span>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">Python</span>
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">Shiny</span>
+                        <span class="bg-blue-50 text-blue-800 px-1 py-0.5 rounded text-xs">Data Visualization</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section class="mt-12 bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
-            <h2 class="text-3xl font-bold text-center mb-6 text-slate-900">Technical Skills</h2>
-            <div class="grid grid-cols-2 gap-3">
+        <section class="mt-8 md:mt-12 bg-white border border-gray-200 p-4 md:p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-slate-900">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div class="bg-blue-50 p-3 rounded shadow text-center">
                     <h3 class="font-semibold text-sm text-blue-800">Languages</h3>
                     <p class="text-slate-700 text-xs">Python, JavaScript, HTML, Java, SQL</p>
@@ -122,7 +119,6 @@
             </div>
         </section>
 
-        <!-- Image Gallery Slider -->
         <section class="mt-12">
             <h2 class="text-3xl font-bold text-center mb-6 text-slate-900">Data Visualization Portfolio</h2>
             <div class="relative">
@@ -140,46 +136,42 @@
     </div>
     
     <script>
-        // Image list (replace with your actual image paths)
-        const images = ["playtype.jpeg","shotmap.jpg",
-        "gamereport.jpeg", "player_series2.jpeg","salarycomp.jpg", "team_scatter.jpeg", "books.jpeg",  "threespread.jpg", "player_shift.jpeg","game_rotation.jpeg","wowy.jpg","passnetwork.jpeg",       "payspread1.jpg", 
-     "payspread2.jpg",
-        "ballhog.jpg", "goalcont.jpg", "scoring.jpg", 
-        "scoring_team.jpg",  "playspread2.jpg", "playspreadv2.jpg","dplayspread.jpg", "dplayspreadv2.jpg", "spread.jpg", "spread2.jpg", 
-        "howmuch.jpeg", "playchange.jpg",  "teamplay.jpg",
-        "picks.jpeg", 
-        "careerbron.jpg",  "series.jpg", "teamplayd.jpg",
-        "contracts.jpg", "hustle.jpg",  "series_scoring.png", 
-       "jumpshot.jpg", "playershift.jpeg", "shotchange1.jpg", "shotchange22.jpg","shotchange2.jpg","teamshots.jpg","teamshotd.jpg",
-        "teambron.jpg","teambrond.jpg",
-         "olebron.jpg", "dlebron.jpg", 
-        "lineup_breakdown.jpeg", "playmake.jpg",  "teamthrees.jpg","oppthrees.jpg",
-         "lineups.jpg","threepoint.jpg",
-         "matchups.jpg", "playspread1.jpg",  
-        "shotdefenseon.jpg","shotdefenseoff.jpg", "tracking.jpg",
-       "playstyle.jpg","trending.jpg",
-       "shotzone.jpg", "w_shotmap.jpg",
-         "price.jpg", 
-        "rim.jpg", 
-        "playleader.jpg", "teamleader.jpg", 
-         "pairings.jpg", "stats.jpg",
-        "dribbleshot.jpg",  "rotations.jpg", 
-       "salary.jpg",
+        // Your existing JavaScript code remains the same
+      const images = ["playtype.jpeg","shotmap.jpg",
+"gamereport.jpeg", "player_series2.jpeg","salarycomp.jpg", "team_scatter.jpeg", "books.jpeg",  "threespread.jpg", "player_shift.jpeg","game_rotation.jpeg","wowy.jpg","passnetwork.jpeg",       "payspread1.jpg", 
+"payspread2.jpg",
+"ballhog.jpg", "goalcont.jpg", "scoring.jpg", 
+"scoring_team.jpg",  "playspread2.jpg", "playspreadv2.jpg","dplayspread.jpg", "dplayspreadv2.jpg", "spread.jpg", "spread2.jpg", 
+"howmuch.jpeg", "playchange.jpg",  "teamplay.jpg",
+"picks.jpeg", 
+"careerbron.jpg",  "series.jpg", "teamplayd.jpg",
+"contracts.jpg", "hustle.jpg",  "series_scoring.png", 
+"jumpshot.jpg", "playershift.jpeg", "shotchange1.jpg", "shotchange22.jpg","shotchange2.jpg","teamshots.jpg","teamshotd.jpg",
+"teambron.jpg","teambrond.jpg",
+ "olebron.jpg", "dlebron.jpg", 
+"lineup_breakdown.jpeg", "playmake.jpg",  "teamthrees.jpg","oppthrees.jpg",
+ "lineups.jpg","threepoint.jpg",
+ "matchups.jpg", "playspread1.jpg",  
+"shotdefenseon.jpg","shotdefenseoff.jpg", "tracking.jpg",
+"playstyle.jpg","trending.jpg",
+"shotzone.jpg", "w_shotmap.jpg",
+ "price.jpg", 
+"rim.jpg", 
+"playleader.jpg", "teamleader.jpg", 
+ "pairings.jpg", "stats.jpg",
+"dribbleshot.jpg",  "rotations.jpg", 
+"salary.jpg",
 
-        ];
-
-        // Slider functionality
+];
         let currentSlide = 0;
         const slider = document.getElementById('imageSlider');
 
-        // Populate slider with images
         function populateSlider() {
             images.forEach((imageName, index) => {
                 const slide = document.createElement('div');
                 slide.classList.add('slide', 'image-slide', 'p-4', 'bg-gray-800', 'rounded-lg');
                 
                 const img = document.createElement('img');
-                // Adjust the path to match your image directory
                 img.src = `images/${imageName}`;
                 img.alt = `Visualization ${index + 1}`;
                 img.classList.add('rounded-lg', 'shadow-lg');
@@ -198,10 +190,10 @@
             });
         }
 
-        // Initialize slider when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
             populateSlider();
         });
     </script>
 </body>
 </html>
+
